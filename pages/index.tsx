@@ -1,7 +1,12 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 const Home = () => {
+  const route = useRouter();
+  const handleClick = () => {
+    route.push('/product');
+  };
   return (
     <div>
       <h1>Home Page</h1>
@@ -11,6 +16,7 @@ const Home = () => {
       <Link href="/product">
         <h4>Product</h4>
       </Link>
+      <button onClick={handleClick}>Place Order</button>
     </div>
   );
 };
