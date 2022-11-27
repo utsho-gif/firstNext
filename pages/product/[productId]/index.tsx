@@ -3,7 +3,6 @@ import React from 'react';
 
 const ProductDetails = () => {
   const route = useRouter();
-  console.log({ route });
   const productId = route.query.productId;
   return (
     <div>
