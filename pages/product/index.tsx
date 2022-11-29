@@ -1,22 +1,25 @@
-import Link from 'next/link';
+import Product from '../../components/product';
 
-const ProductList = () => {
+const ProductList = ({ products }: any) => {
   return (
     <div>
-      <Link href="/">
-        <h4>Home</h4>
-      </Link>
-      <Link href="/product/1">
-        <h1>Product 1</h1>
-      </Link>
-      <Link href="/product/2">
-        <h1>Product 2</h1>
-      </Link>
-      <Link href="/product/3" replace>
-        <h1>Product 3</h1>
-      </Link>
+      <h1 style={{ textAlign: 'center' }}>All Products</h1>
+      {products.map((product: any) => (
+        <Product key={product?.id} product={product} passHref></Product>
+      ))}
     </div>
   );
 };
 
 export default ProductList;
+
+export async function getStaticProps() {
+  const response = await fetch(`http://localhost:4000/products`);
+  const data = await response.json();
+  return {
+    props: {
+      products: data,
+    },
+    revalidate: 10,
+  };
+}

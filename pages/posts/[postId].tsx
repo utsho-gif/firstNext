@@ -1,3 +1,4 @@
+import { NOTFOUND } from 'dns';
 import React from 'react';
 
 const Post = ({ post }: any) => {
@@ -42,6 +43,11 @@ export async function getStaticProps(context: any) {
     `https://jsonplaceholder.typicode.com/posts/${params?.postId}`
   );
   const data = await response.json();
+  if (!data?.id) {
+    return {
+      NOTFOUND: true,
+    };
+  }
   return {
     props: {
       post: data,
