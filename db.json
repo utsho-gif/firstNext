@@ -1,4 +1,76 @@
 {
+  "events": [
+    {
+      "id": "1",
+      "title": "Event 1",
+      "description": "Description 1",
+      "category": "sports",
+      "date": "Apr15 2022"
+    },
+    {
+      "id": "2",
+      "title": "Event 2",
+      "description": "Description 2",
+      "category": "technology",
+      "date": "Mar15 2022"
+    },
+    {
+      "id": "3",
+      "title": "Event 3",
+      "description": "Description 3",
+      "category": "food",
+      "date": "Jun23 2021"
+    },
+    {
+      "id": "4",
+      "title": "Event 4",
+      "description": "Description 4",
+      "category": "politics",
+      "date": "Sep11 2022"
+    },
+    {
+      "id": "5",
+      "title": "Event 5",
+      "description": "Description 5",
+      "category": "sports",
+      "date": "Sep20 2022"
+    },
+    {
+      "id": "6",
+      "title": "Event 6",
+      "description": "Description 6",
+      "category": "food",
+      "date": "Nov4 2020"
+    },
+    {
+      "id": "7",
+      "title": "Event 7",
+      "description": "Description 7",
+      "category": "sports",
+      "date": "Jan1 2022"
+    },
+    {
+      "id": "8",
+      "title": "Event 8",
+      "description": "Description 8",
+      "category": "technology",
+      "date": "Apr16 2022"
+    },
+    {
+      "id": "9",
+      "title": "Event 9",
+      "description": "Description 9",
+      "category": "food",
+      "date": "Aug29 2022"
+    },
+    {
+      "id": "10",
+      "title": "Event 10",
+      "description": "Description 10",
+      "category": "sports",
+      "date": "Oct18 2022"
+    }
+  ],
   "dashboard": {
     "posts": "5",
     "likes": "100",

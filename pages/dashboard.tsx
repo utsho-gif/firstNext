@@ -6,6 +6,7 @@ interface IDash {
   following: string;
 }
 const Dashboard = () => {
+  const [loading, setLoading] = useState(true);
   const [dashboardData, setDashboardData] = useState<IDash>({
     posts: '',
     likes: '',
@@ -17,7 +18,11 @@ const Dashboard = () => {
     fetch(`http://localhost:4000/dashboard`)
       .then((res) => res.json())
       .then((data) => setDashboardData(data));
+    setLoading(false);
   }, []);
+  if (loading === true) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>User Dashboard</h1>
