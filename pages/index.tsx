@@ -8,7 +8,14 @@ const Home = () => {
     route.push('/product');
   };
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}
+    >
       <h1>Home Page</h1>
       <Link href="/blog">
         <h4>Blog</h4>
