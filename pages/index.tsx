@@ -16,7 +16,7 @@ const Home = () => {
         flexDirection: 'column',
       }}
     >
-      <h1>Home Page</h1>
+      <h1 className="text-danger">Home Page</h1>
       <Link href="/blog">
         <h4>Blog</h4>
       </Link>
@@ -25,6 +25,9 @@ const Home = () => {
       </Link>
       <Link href="/posts">
         <h4>Posts</h4>
+      </Link>
+      <Link href="/about">
+        <h4>About</h4>
       </Link>
       <button onClick={handleClick}>Place Order</button>
     </div>

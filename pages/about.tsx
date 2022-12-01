@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 
 const About = () => {
   return (
@@ -9,3 +10,12 @@ const About = () => {
 };
 
 export default About;
+
+About.getLayout = function PageLayout(page: any) {
+  return (
+    <>
+      {page}
+      <Footer />
+    </>
+  );
+};
