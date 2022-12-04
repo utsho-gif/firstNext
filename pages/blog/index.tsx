@@ -9,3 +9,11 @@ const Blog = () => {
 };
 
 export default Blog;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Blog',
+    },
+  };
+}

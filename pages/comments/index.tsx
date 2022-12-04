@@ -83,3 +83,11 @@ const CommentsList = () => {
 };
 
 export default CommentsList;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Comments',
+    },
+  };
+}

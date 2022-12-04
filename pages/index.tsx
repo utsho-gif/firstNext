@@ -29,9 +29,20 @@ const Home = () => {
       <Link href="/about">
         <h4>About</h4>
       </Link>
+      <Link href="/news">
+        <h4>News</h4>
+      </Link>
       <button onClick={handleClick}>Place Order</button>
     </div>
   );
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      title: 'Home',
+    },
+  };
+}

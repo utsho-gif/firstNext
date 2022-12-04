@@ -33,6 +33,7 @@ export async function getServerSideProps() {
   return {
     props: {
       articles: data,
+      title: 'News',
     },
   };
 }
