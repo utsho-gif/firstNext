@@ -32,6 +32,9 @@ const Home = () => {
       <Link href="/news">
         <h4>News</h4>
       </Link>
+      <Link href="/gallery">
+        <h4>Gallery</h4>
+      </Link>
       <button onClick={handleClick}>Place Order</button>
     </div>
   );
