@@ -11,11 +11,11 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
-  if (Component.getLayout) {
-    return Component.getLayout(
-      <Component style={{ minHeight: '100vh' }} {...pageProps} />
-    );
-  }
+  // if (Component.getLayout) {
+  //   return Component.getLayout(
+  //     <Component style={{ minHeight: '100vh' }} {...pageProps} />
+  //   );
+  // }
   return (
     <>
       <SessionProvider session={session}>
