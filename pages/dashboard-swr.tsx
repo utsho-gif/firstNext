@@ -1,5 +1,7 @@
-import React from 'react';
+import { getSession, signIn } from 'next-auth/react';
+import React, { useEffect, useState } from 'react';
 import useSWR from 'swr';
+import { Skeleton } from 'antd';
 
 const fetcher = async () => {
   const response = await fetch(`http://localhost:4000/dashboard`);
@@ -8,11 +10,28 @@ const fetcher = async () => {
 };
 const DashboardWSwr = () => {
   const { data, error } = useSWR('dashboard', fetcher);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const securePage = async () => {
+      const session = await getSession();
+      if (!session) {
+        signIn();
+      } else {
+        setLoading(false);
+      }
+    };
+    securePage();
+  }, []);
+
+  if (loading) {
+    return <Skeleton active />;
+  }
+
   if (error) {
     return 'An error occurred while fetching';
   }
   if (!data) {
-    return <h1>Loading...</h1>;
+    return <Skeleton active />;
   }
   return (
     <div>
